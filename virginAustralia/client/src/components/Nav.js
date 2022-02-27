@@ -24,7 +24,8 @@ const Nav = () => {
                 <span className="bar"></span>
                 <span className="bar"></span>
               </div>
-              <div className="mobileMenu_text">MENU</div>
+              <div className="text text_menu">menu</div>
+              <div className="text text_close">close</div>
             </div>
             <div className="mobileMenu_box"></div>
           </div>
