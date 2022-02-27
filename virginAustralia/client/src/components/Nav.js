@@ -10,8 +10,9 @@ const Nav = () => {
     navRef.current.classList.toggle("mobileMenu_active");
   };
   const [currentMenu, setCurrentMenu] = useState("");
-  const mouseEnterHandler = (menu) => {
-    setCurrentMenu(menu);
+  const mouseEnterHandler = (e) => {
+    console.log(e.target);
+    // setCurrentMenu(e.target.id);
   };
   return (
     <div className="nav" id="nav">
@@ -24,7 +25,8 @@ const Nav = () => {
                 <span className="bar"></span>
                 <span className="bar"></span>
               </div>
-              <div className="mobileMenu_text">MENU</div>
+              <div className="text text_menu">menu</div>
+              <div className="text text_close">close</div>
             </div>
             <div className="mobileMenu_box"></div>
           </div>
@@ -36,10 +38,7 @@ const Nav = () => {
         <div className="mobileMenu_content">
           <div className="content_box">
             <ul className="nav_items">
-              <li
-                id="home"
-                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
-              >
+              <li id="home" onMouseEnter={(e) => mouseEnterHandler(e.target)}>
                 home
                 <RightArrow />
               </li>
