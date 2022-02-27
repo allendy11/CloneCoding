@@ -141,6 +141,9 @@ html {
   position: absolute;
   right: -3rem;
 }
+.select {
+  color: #ce2f22;
+}
 /*! mobileMenu_active */
 .mobileMenu_active .text_menu {
   display: none;
@@ -191,13 +194,13 @@ html {
 .mobileMenu_active .mobileMenu_content .nav_items > li:hover .icon_RightArrow {
   display: block;
   position: absolute;
-  right: -3rem;
+  right: 0;
 }
 /*! mobileMenu_active*/
 
 .content_box:nth-child(2) ul {
   list-style: none;
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
 .content_box:nth-child(2) li {
   font-size: 1rem;
@@ -208,6 +211,7 @@ html {
   align-items: center;
   position: relative;
   font-weight: 500;
+  /* color: black; */
 }
 .content_box:nth-child(2) li > .icon_RightArrow {
   display: none;
