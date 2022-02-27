@@ -2,14 +2,17 @@ import React, { useState, useRef } from "react";
 import logo from "images/virgin_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import RightArrow from "./RightArrow";
 const Nav = () => {
   const mobileMenuRef = useRef();
   const navRef = useRef();
   const menuHandler = () => {
-    // mobileMenuRef.current.classList.toggle("mobileMenu_active");
     navRef.current.classList.toggle("mobileMenu_active");
   };
-
+  const [currentMenu, setCurrentMenu] = useState("");
+  const mouseEnterHandler = (menu) => {
+    setCurrentMenu(menu);
+  };
   return (
     <div className="nav" id="nav">
       <div className="nav_container" ref={navRef}>
@@ -33,45 +36,151 @@ const Nav = () => {
         <div className="mobileMenu_content">
           <div className="content_box">
             <ul className="nav_items">
-              <li>
-                HOME
-                <div className="icon_RightArrow">
-                  <FontAwesomeIcon icon={faArrowRight} color=" #ce2f22" />
-                </div>
+              <li
+                id="home"
+                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
+              >
+                home
+                <RightArrow />
               </li>
-              <li>
-                COMPANIES{" "}
-                <div className="icon_RightArrow">
-                  <FontAwesomeIcon icon={faArrowRight} color=" #ce2f22" />
-                </div>
+              <li
+                id="companies"
+                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
+              >
+                companies
+                <RightArrow />
               </li>
-              <li>
-                ABOUT US{" "}
-                <div className="icon_RightArrow">
-                  <FontAwesomeIcon icon={faArrowRight} color=" #ce2f22" />
-                </div>
+              <li
+                id="aboutUs"
+                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
+              >
+                about us
+                <RightArrow />
               </li>
-              <li>
-                OUR FOUNDATION{" "}
-                <div className="icon_RightArrow">
-                  <FontAwesomeIcon icon={faArrowRight} color=" #ce2f22" />
-                </div>
+              <li
+                id="ourFoundation"
+                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
+              >
+                our foundation
+                <RightArrow />
               </li>
-              <li>
-                BRANSON FAMILY{" "}
-                <div className="icon_RightArrow">
-                  <FontAwesomeIcon icon={faArrowRight} color=" #ce2f22" />
-                </div>
+              <li
+                id="bransonFamily"
+                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
+              >
+                branson family
+                <RightArrow />
               </li>
-              <li>
-                VIRGIN RED{" "}
-                <div className="icon_RightArrow">
-                  <FontAwesomeIcon icon={faArrowRight} color=" #ce2f22" />
-                </div>
+              <li
+                id="virginRed"
+                onMouseEnter={(e) => mouseEnterHandler(e.target.id)}
+              >
+                virgin red
+                <RightArrow />
               </li>
             </ul>
           </div>
-          <div className="content_box"></div>
+          <div className="content_box">
+            {currentMenu === "aboutUs" ? (
+              <ul className="aboutUs_items">
+                <li>
+                  about us
+                  <RightArrow />
+                </li>
+                <li>
+                  our story
+                  <RightArrow />
+                </li>
+                <li>
+                  timeline
+                  <RightArrow />
+                </li>
+                <li>
+                  working at virgin
+                  <RightArrow />
+                </li>
+                <li>
+                  latest
+                  <RightArrow />
+                </li>
+                <li>
+                  virgin group
+                  <RightArrow />
+                </li>
+                <ul className="virginGroup_items">
+                  <li>
+                    overview
+                    <RightArrow />
+                  </li>
+                  <li>
+                    seniorteam
+                    <RightArrow />
+                  </li>
+                  <li>
+                    news
+                    <RightArrow />
+                  </li>
+                </ul>
+              </ul>
+            ) : currentMenu === "ourFoundation" ? (
+              <ul className="ourFoundation_items">
+                <li>
+                  our foundation
+                  <RightArrow />
+                </li>
+                <li>
+                  latest
+                  <RightArrow />
+                </li>
+                <li>
+                  virgin unite website
+                  <RightArrow />
+                </li>
+              </ul>
+            ) : currentMenu === "bransonFamily" ? (
+              <ul className="bransonFamily_items">
+                <li>
+                  branson family
+                  <RightArrow />
+                </li>
+                <li>
+                  richard branson's blog
+                  <RightArrow />
+                </li>
+                <li>
+                  holly branson's blog
+                  <RightArrow />
+                </li>
+                <li>
+                  books
+                  <RightArrow />
+                </li>
+                <li>
+                  book a branson
+                  <RightArrow />
+                </li>
+              </ul>
+            ) : currentMenu === "virginRed" ? (
+              <ul className="virginRed_items">
+                <li>
+                  home
+                  <RightArrow />
+                </li>
+                <li>
+                  spend
+                  <RightArrow />
+                </li>
+                <li>
+                  earn
+                  <RightArrow />
+                </li>
+                <li>
+                  my rewards
+                  <RightArrow />
+                </li>
+              </ul>
+            ) : null}
+          </div>
           <div className="content_box"></div>
         </div>
 
