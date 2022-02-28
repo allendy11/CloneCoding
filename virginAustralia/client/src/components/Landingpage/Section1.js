@@ -1,5 +1,6 @@
 import React from "react";
 import mainImage from "images/virginAus_main_image.png";
+import Arrow2 from "components/Arrow2";
 const Section1 = () => {
   return (
     <div className="section" id="section1">
@@ -9,10 +10,7 @@ const Section1 = () => {
           <div>Virgin Australia welcome back international travellers</div>
           <div>
             time to travel
-            <div id="arrowIcon">
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </div>
+            <Arrow2 />
           </div>
         </div>
         <div className="section1_image">

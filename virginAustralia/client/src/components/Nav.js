@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import logo from "images/virgin_logo.png";
-import RightArrow from "./RightArrow";
+import Arrow from "./Arrow";
+import Arrow2 from "./Arrow2";
 const Nav = () => {
   const mobileMenuRef = useRef([]);
   const aboutUsRef = useRef([]);
@@ -59,7 +60,7 @@ const Nav = () => {
                 ref={(el) => (mobileMenuRef.current[0] = el)}
               >
                 home
-                <RightArrow />
+                <Arrow />
               </li>
               <li
                 id="companies"
@@ -71,7 +72,7 @@ const Nav = () => {
                 ref={(el) => (mobileMenuRef.current[1] = el)}
               >
                 companies
-                <RightArrow />
+                <Arrow />
               </li>
               <li
                 id="aboutUs"
@@ -83,7 +84,7 @@ const Nav = () => {
                 ref={(el) => (mobileMenuRef.current[2] = el)}
               >
                 about us
-                <RightArrow />
+                <Arrow />
               </li>
               <li
                 id="ourFoundation"
@@ -95,7 +96,7 @@ const Nav = () => {
                 ref={(el) => (mobileMenuRef.current[3] = el)}
               >
                 our foundation
-                <RightArrow />
+                <Arrow />
               </li>
               <li
                 id="bransonFamily"
@@ -107,7 +108,7 @@ const Nav = () => {
                 ref={(el) => (mobileMenuRef.current[4] = el)}
               >
                 branson family
-                <RightArrow />
+                <Arrow />
               </li>
               <li
                 id="virginRed"
@@ -119,7 +120,7 @@ const Nav = () => {
                 ref={(el) => (mobileMenuRef.current[5] = el)}
               >
                 virgin red
-                <RightArrow />
+                <Arrow />
               </li>
             </ul>
           </div>
@@ -132,7 +133,7 @@ const Nav = () => {
                   ref={(el) => (aboutUsRef.current[0] = el)}
                 >
                   about us
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -140,7 +141,7 @@ const Nav = () => {
                   ref={(el) => (aboutUsRef.current[1] = el)}
                 >
                   our story
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -148,7 +149,7 @@ const Nav = () => {
                   ref={(el) => (aboutUsRef.current[2] = el)}
                 >
                   timeline
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -156,7 +157,7 @@ const Nav = () => {
                   ref={(el) => (aboutUsRef.current[3] = el)}
                 >
                   working at virgin
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -164,7 +165,7 @@ const Nav = () => {
                   ref={(el) => (aboutUsRef.current[4] = el)}
                 >
                   latest
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -172,7 +173,7 @@ const Nav = () => {
                   ref={(el) => (aboutUsRef.current[5] = el)}
                 >
                   virgin group
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <ul className="virginGroup_items">
                   <li
@@ -183,7 +184,7 @@ const Nav = () => {
                     ref={(el) => (aboutUsRef.current[6] = el)}
                   >
                     overview
-                    <RightArrow />
+                    <Arrow />
                   </li>
                   <li
                     className="unselect"
@@ -193,7 +194,7 @@ const Nav = () => {
                     ref={(el) => (aboutUsRef.current[7] = el)}
                   >
                     seniorteam
-                    <RightArrow />
+                    <Arrow />
                   </li>
                   <li
                     className="unselect"
@@ -203,7 +204,7 @@ const Nav = () => {
                     ref={(el) => (aboutUsRef.current[8] = el)}
                   >
                     news
-                    <RightArrow />
+                    <Arrow />
                   </li>
                 </ul>
               </ul>
@@ -217,7 +218,7 @@ const Nav = () => {
                   ref={(el) => (ourFoundationRef.current[0] = el)}
                 >
                   our foundation
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -227,7 +228,7 @@ const Nav = () => {
                   ref={(el) => (ourFoundationRef.current[1] = el)}
                 >
                   latest
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -237,7 +238,7 @@ const Nav = () => {
                   ref={(el) => (ourFoundationRef.current[2] = el)}
                 >
                   virgin unite website
-                  <RightArrow />
+                  <Arrow />
                 </li>
               </ul>
             ) : currentMenu === "bransonFamily" ? (
@@ -250,7 +251,7 @@ const Nav = () => {
                   ref={(el) => (bransonFamilyRef.current[0] = el)}
                 >
                   branson family
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -260,7 +261,7 @@ const Nav = () => {
                   ref={(el) => (bransonFamilyRef.current[1] = el)}
                 >
                   richard branson's blog
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -270,7 +271,7 @@ const Nav = () => {
                   ref={(el) => (bransonFamilyRef.current[2] = el)}
                 >
                   holly branson's blog
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -280,7 +281,7 @@ const Nav = () => {
                   ref={(el) => (bransonFamilyRef.current[3] = el)}
                 >
                   books
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -290,7 +291,7 @@ const Nav = () => {
                   ref={(el) => (bransonFamilyRef.current[4] = el)}
                 >
                   book a branson
-                  <RightArrow />
+                  <Arrow />
                 </li>
               </ul>
             ) : currentMenu === "virginRed" ? (
@@ -303,7 +304,7 @@ const Nav = () => {
                   ref={(el) => (virginRedRef.current[0] = el)}
                 >
                   home
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -313,7 +314,7 @@ const Nav = () => {
                   ref={(el) => (virginRedRef.current[1] = el)}
                 >
                   spend
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -323,7 +324,7 @@ const Nav = () => {
                   ref={(el) => (virginRedRef.current[2] = el)}
                 >
                   earn
-                  <RightArrow />
+                  <Arrow />
                 </li>
                 <li
                   className="unselect"
@@ -333,7 +334,7 @@ const Nav = () => {
                   ref={(el) => (virginRedRef.current[3] = el)}
                 >
                   my rewards
-                  <RightArrow />
+                  <Arrow />
                 </li>
               </ul>
             ) : null}
@@ -344,10 +345,52 @@ const Nav = () => {
         <div className="navbar">
           <ul className="nav_items">
             <li>COMPANIES</li>
-            <li>ABOUT US</li>
-            <li>OUR FOUNDATION</li>
-            <li>BRANSON FAMILY</li>
-            <li>VIRGIN RED</li>
+            <li>
+              <div>
+                ABOUT US
+                <Arrow2 />
+              </div>
+              <ul>
+                <li>our story</li>
+                <li>timeline</li>
+                <li>working at virgin</li>
+                <li>latest</li>
+                <li>virgin group</li>
+              </ul>
+            </li>
+            <li>
+              <div>
+                OUR FOUNDATION
+                <Arrow2 />
+              </div>
+              <ul>
+                <li>latest</li>
+                <li>virgin unite website</li>
+              </ul>
+            </li>
+            <li>
+              <div>
+                BRANSON FAMILY
+                <Arrow2 />
+              </div>
+              <ul>
+                <li>richard branson's blog</li>
+                <li>holly branson's blog</li>
+                <li>books</li>
+                <li>book a branson</li>
+              </ul>
+            </li>
+            <li>
+              <div>
+                VIRGIN RED
+                <Arrow2 />
+              </div>
+              <ul>
+                <li>spend</li>
+                <li>earn</li>
+                <li>my rewards</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

@@ -89,14 +89,75 @@ html {
   width: 100%;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  height: 4rem;
 }
 .navbar > .nav_items > li {
   cursor: pointer;
-  letter-spacing: 2px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
   font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.navbar > .nav_items > li > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar > .nav_items > li:hover {
+  color: #e10a0a;
+}
+.navbar > .nav_items > li #arrowIcon {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 1.5rem;
+}
+.navbar > .nav_items > li #arrowIcon > .bar {
+  background-color: black;
+  height: 2px;
+  width: 10px;
+}
+.navbar > .nav_items > li:hover #arrowIcon > .bar {
+  background-color: #e10a0a;
+}
+.navbar > .nav_items > li > ul {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.navbar > .nav_items > li:hover ul {
+  opacity: 1;
+  z-index: 10;
+  border-top: 0.3rem solid #e10a0a;
+  top: 3.7rem;
+}
+.navbar > .nav_items > li > ul > li {
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 4rem;
+  color: black;
+  text-transform: uppercase;
+}
+.navbar > .nav_items > li > ul > li:hover {
   color: #e10a0a;
 }
 .mobileMenu_content {
@@ -129,13 +190,13 @@ html {
   justify-content: space-between;
   position: relative;
 }
-.mobileMenu_content .nav_items .icon_RightArrow {
+.mobileMenu_content .nav_items .icon_arrow {
   display: none;
 }
 .mobileMenu_content .nav_items > li:hover {
   color: #e10a0a;
 }
-.mobileMenu_content .nav_items > li:hover .icon_RightArrow {
+.mobileMenu_content .nav_items > li:hover .icon_arrow {
   display: block;
   position: absolute;
   right: -3rem;
@@ -183,13 +244,13 @@ html {
   text-transform: capitalize;
   /* color: #e10a0a; */
 }
-.mobileMenu_active .mobileMenu_content .nav_items .icon_RightArrow {
+.mobileMenu_active .mobileMenu_content .nav_items .icon_arrow {
   display: none;
 }
 .mobileMenu_active .mobileMenu_content .nav_items > li:hover {
   color: #e10a0a;
 }
-.mobileMenu_active .mobileMenu_content .nav_items > li:hover .icon_RightArrow {
+.mobileMenu_active .mobileMenu_content .nav_items > li:hover .icon_arrow {
   display: block;
   position: absolute;
   right: 0;
@@ -212,13 +273,13 @@ html {
   cursor: pointer;
   /* color: black; */
 }
-.content_box:nth-child(2) li > .icon_RightArrow {
+.content_box:nth-child(2) li > .icon_arrow {
   display: none;
 }
 .content_box:nth-child(2) li:hover {
   color: #e10a0a;
 }
-.content_box:nth-child(2) li:hover .icon_RightArrow {
+.content_box:nth-child(2) li:hover .icon_arrow {
   font-size: 2rem;
   display: block;
   position: absolute;
@@ -277,6 +338,8 @@ html {
   width: 8px;
   height: 1px;
   margin: 2px auto;
+}
+#section1 #arrowIcon .bar {
   background-color: #fff;
 }
 #arrowIcon .bar:nth-child(1) {
