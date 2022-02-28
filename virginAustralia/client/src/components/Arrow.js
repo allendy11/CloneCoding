@@ -1,12 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-const RightArrow = () => {
+const Arrow = () => {
   return (
-    <div className="icon_RightArrow">
+    <div className="icon_arrow">
       <FontAwesomeIcon icon={faArrowRight} color=" #e10a0a" size="xs" />
     </div>
   );
 };
 
-export default RightArrow;
+export default Arrow;
