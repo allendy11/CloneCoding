@@ -33,6 +33,9 @@ html {
   border-bottom: 1px solid #f0f0f0;
   color: #e10a0a;
 }
+.navbar:last-child {
+  /* justify-content: center; */
+}
 .nav_mobileMenu {
   width: 10rem;
   height: 100%;
@@ -91,6 +94,7 @@ html {
   list-style: none;
   display: flex;
   height: 4rem;
+  justify-content: center;
 }
 .navbar > .nav_items > li {
   cursor: pointer;
@@ -98,7 +102,7 @@ html {
   position: relative;
   align-items: center;
   justify-content: center;
-  flex: 1 1 0;
+  flex: 0 1 18rem;
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
@@ -375,10 +379,7 @@ html {
 #section2 {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  /* width: 100%; */
-  /* height: 40rem; */
   position: relative;
 }
 #section2 > div {
@@ -389,7 +390,7 @@ html {
 }
 .section2_text {
   width: 100%;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   font-family: sans-serif;
   height: 8rem;
@@ -400,7 +401,7 @@ html {
   color: #e10a0a;
 }
 .section2_companies {
-  height: 28rem;
+  height: 35rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -408,15 +409,13 @@ html {
   align-items: center;
 }
 .companies_container {
-  height: 25rem;
-  width: 85%;
+  height: 35rem;
+  width: 77rem;
   position: relative;
 }
-#companies_leftArrow {
+.companies_arrow {
   position: absolute;
-  left: -1.5rem;
   top: 45%;
-  transform: rotate(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,53 +425,48 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
+#companies_leftArrow {
+  left: -1.5rem;
+  transform: rotate(180deg);
+}
 .companies_container .icon_arrow {
+  pointer-events: none;
   width: 2rem;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 #companies_leftArrow svg {
   color: #fff;
   font-size: 1.5rem;
 }
 #companies_rightArrow {
-  position: absolute;
   right: -1.5rem;
-  top: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  background-color: #e10a0a;
-  border-radius: 50%;
 }
 #companies_rightArrow svg {
   color: #fff;
   font-size: 1.5rem;
 }
-/*! ***********스크롤 안됨*****************/
 .companies_items {
-  height: 25rem;
-  width: 50rem;
-  border: 1px solid black;
+  /*! section2 스크롤 */
+  height: 35rem;
+  width: 77rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  overflow-y: auto;
+  overflow: hidden;
 }
 .companies_items > div {
-  display: block;
-  width: 20rem;
-  height: 20rem;
-  margin: 1rem;
+  min-width: 25rem;
+  height: 25rem;
+  margin-right: 1rem;
   background-color: #fff;
 }
-.companies_scrollbar {
+.scroll_indicator {
   height: 2rem;
   width: 100%;
+  background-color: #e10a0a;
 }
 .section2_button {
   height: 8rem;
