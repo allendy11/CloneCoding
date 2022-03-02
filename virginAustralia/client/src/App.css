@@ -171,7 +171,7 @@ html {
   left: 0;
   background-color: #fff;
   width: 100%;
-  height: 80vh;
+  height: 49rem;
   transition: all 0.2s ease-in-out;
   opacity: 0;
   z-index: -1;
@@ -180,6 +180,19 @@ html {
   display: block;
   flex: 0 1 24rem;
   padding: 4.6rem 0 0 3.5rem;
+}
+.mobileMenu_content .content_box:last-child {
+}
+.mobileMenu_content .content_box:last-child .mobileMenu_image {
+}
+.mobileMenu_content .content_box:last-child .blank {
+  width: 35rem;
+  height: 49rem;
+  position: absolute;
+  background-image: linear-gradient(102deg, #ffffff 50%, transparent 50%);
+}
+.mobileMenu_content .content_box:last-child img {
+  width: 49rem;
 }
 .mobileMenu_content .nav_items {
   display: flex;
