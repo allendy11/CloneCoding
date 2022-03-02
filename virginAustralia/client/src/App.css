@@ -37,7 +37,7 @@ html {
   /* justify-content: center; */
 }
 .nav_mobileMenu {
-  width: 10rem;
+  width: 8.9rem;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -75,7 +75,7 @@ html {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 900;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 .text_close {
@@ -103,7 +103,7 @@ html {
   align-items: center;
   justify-content: center;
   flex: 0 1 18rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 1px;
 }
 .navbar > .nav_items > li > div {
@@ -298,10 +298,11 @@ html {
 .section {
   /* max-width: 100%; */
 }
-#section {
-  height: 50rem;
+#section1 {
+  height: 36.5rem;
 }
 .section1_content {
+  height: 32.5rem;
   display: flex;
   justify-content: center;
   background-color: #e10a0a;
@@ -457,11 +458,43 @@ html {
   align-items: center;
   overflow: hidden;
 }
-.companies_items > div {
+.company {
   min-width: 25rem;
   height: 25rem;
   margin-right: 1rem;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.company_logo {
+  width: 25rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+}
+.company_logo > img {
+  width: 16em;
+  object-fit: cover;
+}
+.company_name {
+  width: 25rem;
+  /* flex: 1 1 0; */
+  font-size: 1.75rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.company_name #arrowIcon {
+  /* position: absolute; */
+  transform: scale(2);
+  margin-left: 1rem;
+}
+.company_name #arrowIcon .bar {
+  background-color: #e10a0a;
 }
 .scroll_indicator {
   height: 2rem;
@@ -494,7 +527,7 @@ html {
   border-right: 98.5vw solid #fff;
   border-top: 4rem solid #fff1f2;
 }
-#section2 .bar {
+.section2_blank .bar {
   height: 2px;
   width: 4rem;
   position: absolute;
