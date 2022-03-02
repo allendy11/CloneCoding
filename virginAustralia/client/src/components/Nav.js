@@ -339,7 +339,42 @@ const Nav = () => {
               </ul>
             ) : null}
           </div>
-          <div className="content_box"></div>
+          <div className="content_box">
+            {currentMenu === "home" ? (
+              <div className="mobileMenu_image">
+                <div className="blank"></div>
+
+                <img
+                  src="https://www.virgin.com/img/topnavbar/menu/open-menu-home-and-default.jpg?fl=progressive&q=80"
+                  alt=""
+                />
+              </div>
+            ) : currentMenu === "companies" ? (
+              <div className="mobileMenu_image">
+                <div className="blank"></div>
+                <img
+                  src="https://www.virgin.com/img/topnavbar/menu/open-menu-companies.jpg?fl=progressive&q=80"
+                  alt=""
+                />
+              </div>
+            ) : currentMenu === "ourFoundation" ? (
+              <div className="mobileMenu_image">
+                <div className="blank"></div>
+                <img
+                  src="https://www.virgin.com/img/topnavbar/menu/open-menu-richard-unite.jpg?fl=progressive&q=80"
+                  alt=""
+                />
+              </div>
+            ) : currentMenu === "bransonFamily" ? (
+              <div className="mobileMenu_image">
+                <div className="blank"></div>
+                <img
+                  src="https://www.virgin.com/img/topnavbar/menu/open-menu-branson-family.png?fl=progressive&q=80"
+                  alt=""
+                />
+              </div>
+            ) : null}
+          </div>
         </div>
 
         <div className="navbar">
