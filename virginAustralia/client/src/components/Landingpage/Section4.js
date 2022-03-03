@@ -6,9 +6,9 @@ const Section4 = () => {
     <div className="section" id="section4">
       <div className="section4_contents">
         <div className="contents_container">
-          {section4List.map((el) => {
+          {section4List.map((el, idx) => {
             return (
-              <div className="content_item">
+              <div className="content_item" key={idx}>
                 <div>
                   <img src={el.thumbnail} alt="" />
                   <div></div>
