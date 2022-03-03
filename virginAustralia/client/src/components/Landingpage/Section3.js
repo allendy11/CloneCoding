@@ -1,5 +1,6 @@
 import React from "react";
 import { scoopList } from "components/Landingpage/Section3/scoopList";
+import SocialContainer from "components/SocialContainer";
 const Section3 = () => {
   return (
     <div className="section" id="section3">
@@ -35,7 +36,7 @@ const Section3 = () => {
         </div>
         <div>Reach us on social</div>
         <div>Be part of the conversation on our latest ventures</div>
-        <div></div>
+        <SocialContainer />
       </div>
     </div>
   );
