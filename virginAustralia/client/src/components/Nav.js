@@ -3,22 +3,22 @@ import logo from "images/virgin_logo.png";
 import Arrow from "./Arrow";
 import Arrow2 from "./Arrow2";
 const Nav = () => {
-  const mobileMenuRef = useRef([]);
+  const menuListRef = useRef([]);
   const aboutUsRef = useRef([]);
   const ourFoundationRef = useRef([]);
   const bransonFamilyRef = useRef([]);
   const virginRedRef = useRef([]);
-  const navRef = useRef();
+  const mobileMenuRef = useRef();
   const menuHandler = () => {
-    navRef.current.classList.toggle("mobileMenu_active");
+    mobileMenuRef.current.classList.toggle("mobileMenu_active");
   };
   const [currentMenu, setCurrentMenu] = useState("");
   const mouseEnterHandler = (menu) => {
     setCurrentMenu(menu);
-    // mobileMenuRef.current.map((el) => {
+    // menuListRef.current.map((el) => {
     //   el.classList.replace("select", "unselect");
     // });
-    // mobileMenuRef.current[idx].classList.replace("unselect", "select");
+    // menuListRef.current[idx].classList.replace("unselect", "select");
   };
   const selectMenuHandler = (ref, idx) => {
     ref.map((el) => {
@@ -28,7 +28,7 @@ const Nav = () => {
   };
   return (
     <div className="nav" id="nav">
-      <div className="nav_container" ref={navRef}>
+      <div className="nav_container" ref={mobileMenuRef}>
         <div className="navbar">
           <div className="nav_mobileMenu" onClick={menuHandler}>
             <div className="mobileMenu_box">
@@ -55,9 +55,9 @@ const Nav = () => {
                 className="unselect"
                 onMouseEnter={(e) => {
                   mouseEnterHandler(e.target.id);
-                  selectMenuHandler(mobileMenuRef.current, 0);
+                  selectMenuHandler(menuListRef.current, 0);
                 }}
-                ref={(el) => (mobileMenuRef.current[0] = el)}
+                ref={(el) => (menuListRef.current[0] = el)}
               >
                 home
                 <Arrow />
@@ -67,9 +67,9 @@ const Nav = () => {
                 className="unselect"
                 onMouseEnter={(e) => {
                   mouseEnterHandler(e.target.id);
-                  selectMenuHandler(mobileMenuRef.current, 1);
+                  selectMenuHandler(menuListRef.current, 1);
                 }}
-                ref={(el) => (mobileMenuRef.current[1] = el)}
+                ref={(el) => (menuListRef.current[1] = el)}
               >
                 companies
                 <Arrow />
@@ -79,9 +79,9 @@ const Nav = () => {
                 className="unselect"
                 onMouseEnter={(e) => {
                   mouseEnterHandler(e.target.id);
-                  selectMenuHandler(mobileMenuRef.current, 2);
+                  selectMenuHandler(menuListRef.current, 2);
                 }}
-                ref={(el) => (mobileMenuRef.current[2] = el)}
+                ref={(el) => (menuListRef.current[2] = el)}
               >
                 about us
                 <Arrow />
@@ -91,9 +91,9 @@ const Nav = () => {
                 className="unselect"
                 onMouseEnter={(e) => {
                   mouseEnterHandler(e.target.id);
-                  selectMenuHandler(mobileMenuRef.current, 3);
+                  selectMenuHandler(menuListRef.current, 3);
                 }}
-                ref={(el) => (mobileMenuRef.current[3] = el)}
+                ref={(el) => (menuListRef.current[3] = el)}
               >
                 our foundation
                 <Arrow />
@@ -103,9 +103,9 @@ const Nav = () => {
                 className="unselect"
                 onMouseEnter={(e) => {
                   mouseEnterHandler(e.target.id);
-                  selectMenuHandler(mobileMenuRef.current, 4);
+                  selectMenuHandler(menuListRef.current, 4);
                 }}
-                ref={(el) => (mobileMenuRef.current[4] = el)}
+                ref={(el) => (menuListRef.current[4] = el)}
               >
                 branson family
                 <Arrow />
@@ -115,9 +115,9 @@ const Nav = () => {
                 className="unselect"
                 onMouseEnter={(e) => {
                   mouseEnterHandler(e.target.id);
-                  selectMenuHandler(mobileMenuRef.current, 5);
+                  selectMenuHandler(menuListRef.current, 5);
                 }}
-                ref={(el) => (mobileMenuRef.current[5] = el)}
+                ref={(el) => (menuListRef.current[5] = el)}
               >
                 virgin red
                 <Arrow />
