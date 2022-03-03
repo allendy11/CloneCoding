@@ -8,5 +8,5 @@ const Arrow2 = () => {
     </div>
   );
 };
-
+// .bar 컬러 설정 필요
 export default Arrow2;
