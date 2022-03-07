@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const Arrow2 = () => {
   return (
-    <div>
+    <div id="Arrow2">
       <FontAwesomeIcon icon={faArrowRight} />
     </div>
   );
