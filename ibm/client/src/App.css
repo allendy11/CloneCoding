@@ -3,7 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: inherit;
 }
 /*! Nav.js */
 #Nav {
@@ -58,7 +59,7 @@
 .nav_menu:hover {
   color: #0062ff;
 }
-.nav_menu:hover #arrow .bar {
+.nav_menu:hover #Arrow .bar {
   background-color: #0062ff;
 }
 .nav_menu:hover > div:last-child {
@@ -137,26 +138,26 @@
   transition: all 0.3s ease;
 }
 /*! Arrow.js */
-#arrow {
+#Arrow {
   display: flex;
   width: 2rem;
   height: 1rem;
   align-items: center;
   justify-content: center;
 }
-#arrow .bar {
+#Arrow .bar {
   display: block;
   width: 14px;
   height: 1.5px;
   background-color: black;
 }
-#arrow .bar:nth-child(1) {
+#Arrow .bar:nth-child(1) {
   transform: rotate(45deg) translate(3.5px, 0);
 }
-#arrow .bar:nth-child(2) {
+#Arrow .bar:nth-child(2) {
   transform: rotate(-45deg) translate(-3.5px, 0);
 }
-/*! Section.js */
+/*! Section1.js */
 #Section1 {
   width: 100%;
   height: 35rem;
@@ -206,13 +207,16 @@
 /*! Section2 */
 #Section2 {
   width: 100%;
-  height: 40rem;
+  height: 38rem;
   display: flex;
-  justify-content: space-around;
-  padding: 2rem 0;
+  justify-content: center;
+  padding-top: 2rem;
 }
 .section2_box:first-child {
-  padding: 0 2rem;
+  width: 25rem;
+  height: 100%;
+  padding: 0 4rem;
+  max-width: 25%;
 }
 .insideIBM_text p {
   font-size: 1rem;
@@ -220,7 +224,6 @@
   letter-spacing: 0.3px;
 }
 .insideIBM_text {
-  width: 20vw;
   height: auto;
 }
 .insideIBM_text div {
@@ -228,28 +231,262 @@
   color: #525252;
 }
 .section2_box:last-child {
-  width: 70rem;
+  width: 74rem;
   height: 100%;
 }
 .insideIBM_list {
-  width: 100%;
+  width: 73.25rem;
   height: 31rem;
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: scroll;
+  overflow: hidden;
 }
 .insideIBM_list .item {
-  width: 25rem;
+  min-width: 23.75rem;
   height: 100%;
   margin-right: 1rem;
   background-color: #f1f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.insideIBM_list .item:hover {
+  background-color: #e3e7e9;
+}
+.insideIBM_list .item_image {
+  width: 100%;
+  height: 13.35rem;
+}
+.insideIBM_list .item_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.insideIBM_list .item_text {
+  width: 100%;
+  flex: 1 1 0;
+  padding: 1rem;
+  padding-right: 3rem;
+}
+.insideIBM_list .item_text p:first-child {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.insideIBM_list .item_text p:last-child {
+  margin-top: 1rem;
+  color: #525252;
+}
+.insideIBM_list .button {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  padding: 0 1rem;
+  color: #0062ff;
+}
+.insideIBM_list .button #Arrow2 {
+  margin-left: 1rem;
+}
+/*! Scroll_indicator.js */
+#Scroll_indicator {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#Scroll_indicator .scroll_box {
+  width: 6.5rem;
+  height: 3rem;
+  position: absolute;
+  right: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Scroll_indicator #Arrow {
+  background-color: #0062ff;
+  width: 1.9rem;
+  height: 1.9rem;
+  cursor: pointer;
+  pointer-events: none;
+}
+#Scroll_indicator #Arrow .bar {
+  background-color: #fff;
+}
+#Scroll_indicator .left #Arrow {
+  transform: rotate(90deg);
+}
+#Scroll_indicator .right #Arrow {
+  transform: rotate(-90deg);
+}
+#Scroll_indicator .page {
+  font-size: 0.8rem;
+}
+#Scroll_indicator .arrow {
+  cursor: pointer;
+}
+
+/*! Section3.js */
+#Section3 {
+  width: 100%;
+  height: 33rem;
+  background-color: #f1f4f8;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.section3_box:first-child {
+  max-width: 25%;
+  width: 25rem;
+  height: 100%;
+  padding: 0 4rem;
+}
+.section3_box .text {
+  font-size: 1rem;
+}
+.section3_box:last-child {
+  width: 74rem;
+  height: 100%;
+}
+.section3_box .item_list {
+  width: 73.25rem;
+  height: 26rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   overflow: hidden;
 }
-.scroll_indicator {
+.section3_box .item {
+  min-width: 23.75rem;
+  height: 100%;
+  margin-right: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.section3_box .item:hover {
+  background-color: #e3e7e9;
+}
+.section3_box .item_image {
   width: 100%;
-  height: 3rem;
-  margin-top: 2rem;
-  border: 1px solid black;
+  height: 13.35rem;
+}
+.section3_box .item_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section3_box .item_text {
+  width: 100%;
+  flex: 1 1 0;
+  padding: 1rem;
+  padding-right: 3rem;
+}
+.section3_box .item_text p:nth-child(1) {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.section3_box .item_text p:nth-child(2) {
+  color: #525252;
+  margin: 1rem 0 2rem 0;
+}
+.section3_box .item_text p:nth-child(3) {
+  color: #525252;
+}
+.section3_box .button {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  padding: 0 1rem;
+  color: #0062ff;
+}
+.section3_box .button #Arrow2 {
+  margin-left: 1rem;
+}
+/*! Section4.js */
+#Section4 {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.section4_box:first-child {
+  max-width: 25%;
+  width: 25rem;
+  height: 100%;
+  padding: 0 4rem;
+}
+.section4_box .text {
+  font-size: 1rem;
+}
+.section4_box:last-child {
+  width: 74rem;
+  height: 100%;
+}
+.section4_box .item_list {
+  width: 73.25rem;
+  height: 28rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.section4_box .item {
+  min-width: 23.75rem;
+  height: 100%;
+  margin-right: 1rem;
+  background-color: #f1f4f8;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.section4_box .item p {
+  font-size: 1.1rem;
+}
+.section4_box .item ul {
+  margin: 1rem;
+}
+.section4_box .item li {
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #525252;
+}
+.section4_box .item li span {
+  color: #0062ff;
+}
+.section4_box .item li span:hover {
+  border-bottom: 1px solid #0062ff;
+}
+/*! Section5.js */
+#Section5 {
+}
+/*! Section6.js */
+#Section6 {
+}
+/*! Footer.js */
+#Footer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #7c7c7c;
+  font-size: 1.1rem;
+  color: #7c7c7c;
+}
+.footer_container div {
+  margin: 0 1rem;
+  cursor: pointer;
 }
