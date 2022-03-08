@@ -3,12 +3,6 @@ import Arrow2 from "components/Arrow2";
 const Section1 = () => {
   return (
     <div id="Section1" className="section">
-      <div className="background_image">
-        <img
-          src="https://1.cms.s81c.com/sites/default/files/2021-11-01/leadspace-kr-1101-v6.jpg"
-          alt=""
-        />
-      </div>
       <div className="section1_contents">
         <div className="text_box">
           <p>엔터프라이즈 디지털 혁신</p>

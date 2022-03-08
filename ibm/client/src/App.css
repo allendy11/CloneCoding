@@ -42,6 +42,9 @@
   cursor: pointer;
   position: relative;
 }
+.nav_menu div {
+  pointer-events: none;
+}
 .nav_menu > div:first-child {
   height: 3rem;
   display: flex;
@@ -137,6 +140,53 @@
   color: #0062ff;
   transition: all 0.3s ease;
 }
+/*! NavMenu.js */
+.navMenu {
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.navMenu_active {
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  height: 38rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.navMenu_container {
+  width: 100%;
+  height: 100%;
+}
+.navMenu_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.navMenu_box .box:first-child {
+  width: 35rem;
+  height: 100%;
+  background-color: #f4f4f4;
+  padding: 1rem 2rem;
+}
+.navMenu_box .box:first-child ul {
+  list-style: none;
+}
+.navMenu_box .box:first-child li {
+  padding: 0.5rem 4rem;
+  font-size: 1.3rem;
+  color: #525252;
+}
+.navMenu_box .box:first-child li:hover {
+  transition: all 0.5s ease;
+  color: #fff;
+  background-color: #0062ff;
+}
 /*! Arrow.js */
 #Arrow {
   display: flex;
@@ -163,15 +213,10 @@
   height: 35rem;
   border: 1px solid black;
   position: relative;
+  background-image: url("https://1.cms.s81c.com/sites/default/files/2021-11-01/leadspace-kr-1101-v6.jpg");
+  background-size: cover;
 }
-#Section1 .background_image {
-  width: 100%;
-  height: 35rem;
-}
-#Section1 .background_image img {
-  width: 100%;
-  height: 35rem;
-}
+
 .section1_contents {
   height: 35rem;
   position: absolute;
