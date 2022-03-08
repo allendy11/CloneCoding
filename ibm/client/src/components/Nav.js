@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import ibmLogo from "images/ibm_logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import Arrow from "components/Arrow";
+import NavMenu from "components/Nav/NavMenu";
 const Nav = () => {
+  const [menuId, setMenuId] = useState("");
+  const navMenuRef = useRef();
+  const mouseEnter = (id) => {
+    setMenuId(id);
+    navMenuRef.current.classList.add("navMenu_active");
+  };
+  const mouseLeave = () => {
+    navMenuRef.current.classList.remove("navMenu_active");
+  };
   return (
     <div id="Nav">
       <div className="nav_container">
@@ -12,28 +22,44 @@ const Nav = () => {
           <div id="ibm_logo">
             <img src={ibmLogo} alt="IBM" />
           </div>
-          <div className="nav_menu">
+          <div
+            id="ps"
+            className="nav_menu"
+            onMouseEnter={(e) => mouseEnter(e.target.id)}
+          >
             <div>
               제품 및 솔루션
               <Arrow />
             </div>
             <div className="bar"></div>
           </div>
-          <div className="nav_menu">
+          <div
+            id="cs"
+            className="nav_menu"
+            onMouseEnter={(e) => mouseEnter(e.target.id)}
+          >
             <div>
               컨설팅 및 서비스
               <Arrow />
             </div>
             <div className="bar"></div>
           </div>
-          <div className="nav_menu">
+          <div
+            id="es"
+            className="nav_menu"
+            onMouseEnter={(e) => mouseEnter(e.target.id)}
+          >
             <div>
               교육 및 지원
               <Arrow />
             </div>
             <div className="bar"></div>
           </div>
-          <div className="nav_menu">
+          <div
+            id="more"
+            className="nav_menu"
+            onMouseEnter={(e) => mouseEnter(e.target.id)}
+          >
             <div>
               더 둘러보기
               <Arrow />
@@ -55,6 +81,14 @@ const Nav = () => {
             <FontAwesomeIcon icon={faBars} />
           </div>
         </div>
+      </div>
+      <div
+        id="NavMenu"
+        className="navMenu"
+        ref={navMenuRef}
+        onMouseLeave={() => mouseLeave()}
+      >
+        <NavMenu menuId={menuId} />
       </div>
     </div>
   );
