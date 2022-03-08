@@ -465,9 +465,113 @@
 }
 /*! Section5.js */
 #Section5 {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+}
+.section5_box {
+  flex: 1 1 0;
+  position: relative;
+}
+.section5_box:first-child {
+  background-image: url("https://1.cms.s81c.com/sites/default/files/2021-09-07/three-0ffers-v4.jpg");
+  background-size: cover;
+  background-position: right center;
+}
+.section5_box:last-child {
+  background-image: url("https://1.cms.s81c.com/sites/default/files/2021-10-29/consulting%20%28ibm.com%29.jpg");
+  background-size: cover;
+  background-position: right center;
+}
+.section5_box .text1 {
+  width: 30rem;
+  height: 15rem;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.section5_box .text2 {
+  width: 21rem;
+  height: auto;
+  color: #fff;
+  margin-top: 2rem;
+}
+.section5_box .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22rem;
+  height: 10rem;
+  background-color: #0062ff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.section5_box .button > div {
+  color: #fff;
+  font-size: 1.5rem;
+  width: 14rem;
+}
+.section5_box .button #Arrow2 {
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
 /*! Section6.js */
 #Section6 {
+  width: 100%;
+  height: 30rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+.section6_box:first-child {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.section6_box:first-child ul {
+  width: 20rem;
+  list-style: none;
+  /* padding: 0 2rem; */
+}
+.section6_box:first-child ul p {
+  font-weight: 700;
+}
+.section6_box:first-child ul li {
+  margin-top: 1.5rem;
+  color: #7c7c7c;
+  cursor: pointer;
+  width: auto;
+}
+.section6_box:first-child ul li:hover {
+  border-bottom: 1px solid #203c68;
+}
+
+.section6_box:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding: 0 4rem;
+}
+.section6_box:last-child .language {
+  display: flex;
+  flex-direction: column;
+}
+.section6_box:last-child .language select {
+  width: 20rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+.section6_box:last-child .language select:hover {
+  border-color: #0062ff;
+  transition: all 0.3s ease;
 }
 /*! Footer.js */
 #Footer {
@@ -476,9 +580,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f4f4f4;
+  padding: 0 6rem;
 }
 .footer_container {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
