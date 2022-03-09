@@ -88,7 +88,10 @@ const Nav = () => {
         ref={navMenuRef}
         onMouseLeave={() => mouseLeave()}
       >
-        <NavMenu menuId={menuId} />
+        <NavMenu menuId={menuId} mouseLeave={mouseLeave} />
+        <div className="close_menu" onClick={() => mouseLeave()}>
+          <Arrow />
+        </div>
       </div>
     </div>
   );

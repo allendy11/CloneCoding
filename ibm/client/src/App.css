@@ -6,6 +6,26 @@
   /* font-family: sans-serif; */
   font-family: inherit;
 }
+/*! Arrow.js */
+#Arrow {
+  display: flex;
+  width: 2rem;
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+#Arrow .bar {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  background-color: black;
+}
+#Arrow .bar:nth-child(1) {
+  transform: rotate(45deg) translate(3.5px, 0);
+}
+#Arrow .bar:nth-child(2) {
+  transform: rotate(-45deg) translate(-3.5px, 0);
+}
 /*! Nav.js */
 #Nav {
   width: 100%;
@@ -154,7 +174,7 @@
   position: absolute;
   top: 3rem;
   width: 100%;
-  height: 38rem;
+  height: 40rem;
   background-color: #fff;
   transition: all 0.3s ease;
   z-index: 10;
@@ -169,7 +189,7 @@
   display: flex;
 }
 .navMenu_box .box:first-child {
-  width: 35rem;
+  width: 30rem;
   height: 100%;
   background-color: #f4f4f4;
   padding: 1rem 2rem;
@@ -187,26 +207,23 @@
   color: #fff;
   background-color: #0062ff;
 }
-/*! Arrow.js */
-#Arrow {
+.navMenu_active .close_menu {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
   display: flex;
-  width: 2rem;
-  height: 1rem;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-#Arrow .bar {
-  display: block;
-  width: 14px;
-  height: 1.5px;
-  background-color: black;
+.navMenu_active .close_menu:hover #Arrow .bar {
+  background-color: #203c68;
 }
-#Arrow .bar:nth-child(1) {
-  transform: rotate(45deg) translate(3.5px, 0);
+.navMenu_active .close_menu #Arrow .bar {
+  background-color: #7c7c7c;
 }
-#Arrow .bar:nth-child(2) {
-  transform: rotate(-45deg) translate(-3.5px, 0);
-}
+
 /*! Section1.js */
 #Section1 {
   width: 100%;
@@ -564,6 +581,9 @@
   display: flex;
   justify-content: right;
 }
+.section5_box .button:hover {
+  background-color: #0051d3;
+}
 /*! Section6.js */
 #Section6 {
   width: 100%;
@@ -595,7 +615,7 @@
   width: auto;
 }
 .section6_box:first-child ul li:hover {
-  border-bottom: 1px solid #203c68;
+  text-decoration: underline;
 }
 
 .section6_box:last-child {
@@ -640,4 +660,7 @@
 .footer_container div {
   margin: 0 1rem;
   cursor: pointer;
+}
+.footer_container div:hover {
+  text-decoration: underline;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { more_list } from "components/Nav/menuList";
 const Menu_more = () => {
   const [listId, setListId] = useState("");
 
@@ -6,10 +7,9 @@ const Menu_more = () => {
     <div className="navMenu_box">
       <div className="box">
         <ul>
-          <li>파트너</li>
-          <li>IBM 리서치</li>
-          <li>IBM 정보</li>
-          <li>COVID-19</li>
+          {more_list.map((el, idx) => (
+            <li>{el.list}</li>
+          ))}
         </ul>
       </div>
       <div className="box"></div>
