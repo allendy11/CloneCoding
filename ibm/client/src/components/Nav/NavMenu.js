@@ -7,13 +7,13 @@ const NavMenu = ({ menuId }) => {
   return (
     <div className="navMenu_container">
       {menuId === "ps" ? (
-        <Menu_ps />
+        <Menu_ps menuId={menuId} />
       ) : menuId === "cs" ? (
-        <Menu_cs />
+        <Menu_cs menuId={menuId} />
       ) : menuId === "es" ? (
-        <Menu_es />
+        <Menu_es menuId={menuId} />
       ) : menuId === "more" ? (
-        <Menu_more />
+        <Menu_more menuId={menuId} />
       ) : null}
     </div>
   );
