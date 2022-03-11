@@ -1,10 +1,13 @@
 export const ps_list = [
   {
-    list: "핵심 솔루션",
+    id: 0,
+    name: "핵심 솔루션",
     children: ["하이브리드 클라우드", "AI 인공지능"],
   },
   {
-    list: "  주요 제품 및 플랫폼",
+    id: 1,
+
+    name: "  주요 제품 및 플랫폼",
     children: [
       "IBM Automation",
       "IBM Cloud",
@@ -19,7 +22,9 @@ export const ps_list = [
     ],
   },
   {
-    list: "산업군",
+    id: 2,
+
+    name: "산업군",
     children: [
       "뱅킹/금융시장",
       "에너지/유틸리티",
@@ -33,7 +38,9 @@ export const ps_list = [
     ],
   },
   {
-    list: "자동화",
+    id: 3,
+
+    name: "자동화",
     children: [
       "고객 서비스",
       "딥러닝",
@@ -43,7 +50,9 @@ export const ps_list = [
     ],
   },
   {
-    list: "블록체인",
+    id: 4,
+
+    name: "블록체인",
     children: [
       "블록체인 플랫폼",
       "투명한 공급망 관리",
@@ -57,7 +66,8 @@ export const ps_list = [
     ],
   },
   {
-    list: "비즈니스 운영",
+    id: 5,
+    name: "비즈니스 운영",
     children: [
       "엔터프라이즈 자산 관리(EAM)",
       "시스템 엔지니어링",
@@ -66,7 +76,8 @@ export const ps_list = [
     ],
   },
   {
-    list: "클라우드 컴퓨팅",
+    id: 6,
+    name: "클라우드 컴퓨팅",
     children: [
       "컨테이너",
       "데이터베이스",
@@ -79,7 +90,8 @@ export const ps_list = [
     ],
   },
   {
-    list: "데이터/분석",
+    id: 7,
+    name: "데이터/분석",
     children: [
       "데이터 관리",
       "비즈니스 인텔리전스",
@@ -91,7 +103,8 @@ export const ps_list = [
     ],
   },
   {
-    list: "IT 인프라 관리",
+    id: 8,
+    name: "IT 인프라 관리",
     children: [
       "데이터 스토리지",
       "엔터프라이즈 서버",
@@ -103,7 +116,8 @@ export const ps_list = [
     ],
   },
   {
-    list: "보안",
+    id: 9,
+    name: "보안",
     children: [
       "데이터 보안",
       "ID 및 엑세스 관리",
@@ -115,7 +129,8 @@ export const ps_list = [
     ],
   },
   {
-    list: "공급망 관리",
+    id: 10,
+    name: "공급망 관리",
     children: [
       "IBM Sterling",
       "공급망 가시성",
@@ -126,21 +141,25 @@ export const ps_list = [
     ],
   },
   {
-    list: "글로벌 파이낸싱",
+    id: 11,
+    name: "글로벌 파이낸싱",
     children: [],
   },
   {
-    list: "모든 제품 보기",
+    id: 12,
+    name: "모든 제품 보기",
     children: [],
   },
 ];
 export const cs_list = [
   {
-    list: "IBM Consulting",
+    id: 0,
+    name: "IBM Consulting",
     children: ["전략 컨설팅", "경험 컨설팅", "운영 컨설팅", "기술 컨설팅"],
   },
   {
-    list: "비즈니스 프로세스 서비스",
+    id: 1,
+    name: "비즈니스 프로세스 서비스",
     children: [
       "인공지능 서비스",
       "데이터 분석 컨설팅",
@@ -154,7 +173,8 @@ export const cs_list = [
     ],
   },
   {
-    list: "디자인 및 비즈니스 전략",
+    id: 2,
+    name: "디자인 및 비즈니스 전략",
     children: [
       "디지털 전략",
       "고객경험 전략",
@@ -163,19 +183,23 @@ export const cs_list = [
     ],
   },
   {
-    list: "하이브리드 멀티클라우드 서비스",
+    id: 3,
+    name: "하이브리드 멀티클라우드 서비스",
     children: [],
   },
   {
-    list: "인재 관리 및 혁신",
+    id: 4,
+    name: "인재 관리 및 혁신",
     children: ["HR 혁신", "인재 확보", "인재 개발"],
   },
   {
-    list: "애플리케이션 서비스",
+    id: 5,
+    name: "애플리케이션 서비스",
     children: ["애플리케이션 현대화", "엔터프라이즈 애플리케이션 전략"],
   },
   {
-    list: "보안 서비스",
+    id: 6,
+    name: "보안 서비스",
     children: [
       "애플리케이션 보안",
       "데이터 보안",
@@ -185,25 +209,30 @@ export const cs_list = [
     ],
   },
   {
-    list: "기술 지원 서비스",
+    id: 7,
+    name: "기술 지원 서비스",
     children: ["오픈 소스", "서드파티 및 멀티벤더", "IBM 보증 및 유지보수"],
   },
   {
-    list: "글러벌 파이낸싱",
+    id: 8,
+    name: "글러벌 파이낸싱",
     children: [],
   },
   {
-    list: "모든 서비스 보기",
+    id: 9,
+    name: "모든 서비스 보기",
     children: [],
   },
 ];
 export const es_list = [
   {
-    list: "지원",
+    id: 0,
+    name: "지원",
     children: ["IBM 지원", "IBM Cloud 지원", "IBM 개발자", "IBM 커뮤니티"],
   },
   {
-    list: "문서",
+    id: 1,
+    name: "문서",
     children: [
       "모든 제품 문서",
       "IBM Cloud의 제품용",
@@ -211,7 +240,8 @@ export const es_list = [
     ],
   },
   {
-    list: "개발자 교육",
+    id: 2,
+    name: "개발자 교육",
     children: [
       "코드 패턴",
       "개발자 커뮤니티",
@@ -224,15 +254,18 @@ export const es_list = [
     ],
   },
   {
-    list: "교육/훈련",
+    id: 3,
+    name: "교육/훈련",
     children: ["교육 과정", "학습 여정", "전문 자격증", "디지털 학습 구독"],
   },
   {
-    list: "리소스",
+    id: 4,
+    name: "리소스",
     children: ["블로그", "케이스 스터디", "이벤트"],
   },
   {
-    list: "알아보기",
+    id: 5,
+    name: "알아보기",
     children: [
       "인공지능",
       "자동화",
@@ -250,7 +283,8 @@ export const es_list = [
 ];
 export const more_list = [
   {
-    list: "파트너",
+    id: 0,
+    name: "파트너",
     children: [
       "IBM의 파트너 (PartnerWorld)",
       "IBM의 전략적 제휴",
@@ -258,11 +292,13 @@ export const more_list = [
     ],
   },
   {
-    list: "IBM 리서치",
+    id: 1,
+    name: "IBM 리서치",
     children: ["리서치 영역", "연구원 디렉토리", "특허", "인재 채용"],
   },
   {
-    list: "IBM 정보",
+    id: 2,
+    name: "IBM 정보",
     children: [
       "연간 보고서",
       "채용",
@@ -274,7 +310,8 @@ export const more_list = [
     ],
   },
   {
-    list: "COVID-19",
+    id: 3,
+    name: "COVID-19",
     children: ["비즈니스 솔루션", "행동수칙"],
   },
 ];

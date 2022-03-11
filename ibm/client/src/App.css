@@ -46,16 +46,16 @@
   align-items: center;
 }
 #ibm_logo {
-  width: 5rem;
+  width: 6.5rem;
   height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1rem;
 }
 #ibm_logo > img {
   object-fit: cover;
   width: 6.5rem;
+  height: 3rem;
 }
 .nav_menu {
   height: 3rem;
@@ -105,7 +105,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(201, 201, 201);
+  border: 1px solid #7c7c7c;
   position: relative;
 }
 .nav_item:nth-child(1):hover {
@@ -168,6 +168,7 @@
   background-color: #fff;
   transition: all 0.3s ease;
   z-index: 0;
+  border-top: 1px solid #7c7c7c;
 }
 .navMenu_active {
   position: absolute;
@@ -224,7 +225,37 @@
   color: #fff;
   background-color: #0062ff;
 }
-
+.navMenu_box .box:last-child {
+  flex: 1 1 0;
+  height: 100%;
+}
+/*! NavSubMenu.js */
+#NavSubMenu {
+  width: 33rem;
+  height: 100%;
+  padding: 1rem;
+}
+#NavSubMenu > span {
+  font-size: 3rem;
+  color: #0062ff;
+  cursor: pointer;
+}
+#NavSubMenu > span:hover {
+  border-bottom: 2px solid #0062ff;
+}
+#NavSubMenu ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+#NavSubMenu li {
+  color: #0062ff;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+#NavSubMenu li:hover span {
+  border-bottom: 2px solid #0062ff;
+}
 /*! Section1.js */
 #Section1 {
   width: 100%;

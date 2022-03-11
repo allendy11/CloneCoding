@@ -1,17 +1,31 @@
 import React, { useState } from "react";
 import { ps_list } from "components/Nav/menuList";
-const Menu_ps = () => {
+import NavSubMenu from "components/Nav/NavSubMenu";
+const Menu_ps = ({ menuId }) => {
   const [listId, setListId] = useState("");
+  const mouseEnter = (listId) => {
+    setListId(listId);
+  };
   return (
     <div className="navMenu_box">
       <div className="box">
         <ul>
-          {ps_list.map((el) => {
-            return <li>{el.list}</li>;
+          {ps_list.map((el, idx) => {
+            return (
+              <li
+                key={idx}
+                id={idx}
+                onMouseEnter={(e) => mouseEnter(e.target.id)}
+              >
+                {el.name}
+              </li>
+            );
           })}
         </ul>
       </div>
-      <div className="box"></div>
+      <div className="box">
+        <NavSubMenu menuId={menuId} listId={listId} />
+      </div>
     </div>
   );
 };
