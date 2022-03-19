@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+html {
+  /* width: 100vw;
+  height: 100vh; */
+}
+body {
+  height: 500vh;
+  background-color: black;
+}
+.house {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  perspective: 1000px;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.room {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  /* transform: translateZ(-500vw); */
+}
+.wall {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+}
+.wall-side {
+  width: 1200vw;
+  background: white;
+}
+.wall-left {
+  transform: rotateY(90deg) translateZ(-600vw);
+}
+.wall-right {
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+.wall-front {
+}
+.wall-front-a {
+  transform: translateZ(400vw);
+}
+.wall-front-b {
+  transform: translateZ(250vw);
+}
+.wall-front-c {
+  transform: translateZ(100vw);
+}
+.wall-front-d {
+  transform: translateZ(-50vw);
+}
+.wall-front-e {
+  transform: translateZ(-200vw);
+}
+.wall-front-f {
+  transform: translateZ(-350vw);
+}
+.wall-front-g {
+  transform: translateZ(-500vw);
+  background: rgb(243, 243, 243);
+}
+.wall-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wall-content span {
+  font-size: 5rem;
+}
