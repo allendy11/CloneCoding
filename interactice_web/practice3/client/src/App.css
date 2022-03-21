@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#Landingpage {
+  height: 200vw;
+  background-color: yellow;
+}
+.stage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  perspective: 1000px;
+  /* transform-style: preserve-3d; */
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.room {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(-500vw);
+}
+.wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.wall_side {
+  width: 1000vw;
+  background-color: white;
+}
+.wall_left {
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+.wall_right {
+  transform: rotateY(90deg) translateZ(-400vw);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wall_front_a {
+  transform: translateZ(300vw);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wall_front_b {
+  transform: translateZ(50vw);
+}
+.wall_front_c {
+  transform: translateZ(-200vw);
+}
+.wall_front_d {
+  transform: translateZ(-500vw);
+}
+.wall_content {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wall_content > span {
+  font-size: 5rem;
 }
