@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  height: 500vw;
+  background: yellow;
+}
+.stage {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  perspective: 1000px;
+}
+.container {
+  transform-style: preserve-3d;
+}
+.room {
+  transform-style: preserve-3d;
+  transform: translateZ(-490vw);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.wall {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+.wall_side {
+  width: 1000vw;
+  background-color: white;
+}
+.wall_left {
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+.wall_right {
+  transform: rotateY(90deg) translateZ(-400vw);
+}
+.wall_front_a {
+  transform: translateZ(300vw);
+}
+.wall_front_b {
+  transform: translateZ(50vw);
+}
+.wall_front_c {
+  transform: translateZ(-200vw);
+}
+.wall_front_d {
+  transform: translateZ(-500vw);
+}
+.wall_front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
